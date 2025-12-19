@@ -1,0 +1,35 @@
+{
+  "name": "aesthetic-curriculum-accessibility-vitae",
+  "version": "1.0.0",
+  "description": "Aesthetic &amp; Accessible CVs.",
+  "main": "index.js",
+  "scripts": {
+    "build:css": "tailwindcss -i ./src/styles/input.css -o ./out/tailwind.css --minify",
+    "pdf": "npm run build:css && tsx src/generate.ts"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/luciacarrera/aesthetic-curriculum-accessibility-vitae.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/luciacarrera/aesthetic-curriculum-accessibility-vitae/issues"
+  },
+  "homepage": "https://github.com/luciacarrera/aesthetic-curriculum-accessibility-vitae#readme",
+  "dependencies": {
+    "handlebars": "^4.7.8",
+    "playwright": "^1.57.0"
+  },
+  "devDependencies": {
+    "@tailwindcss/cli": "^4.1.18",
+    "@types/handlebars": "^4.0.40",
+    "@types/node": "^25.0.3",
+    "autoprefixer": "^10.4.23",
+    "tailwindcss": "^4.1.18",
+    "tsx": "^4.21.0",
+    "typescript": "^5.9.3"
+  }
+}

@@ -1,0 +1,6 @@
+@import 'tailwindcss';
+
+/* Tell Tailwind where your templates live (so bg-pink-500 gets generated) */
+@source "../templates/**/*.hbs";
+@source "../templates/**/*.html";
+@source "../**/*.ts";
