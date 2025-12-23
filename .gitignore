@@ -1,6 +1,10 @@
-# Don't upload private data
-data/*
-!data/sample.json
+# Don't upload private data but do upload sample data and specific assets
+src/data/*
+!src/data/sample.json
+out/*
+!out/assets/phone.svg
+!out/assets/email.svg
+!out/assets/princess-daisy.png
 
 # Logs
 logs
@@ -80,7 +84,6 @@ web_modules/
 
 # Next.js build output
 .next
-out
 
 # Nuxt.js build / generate output
 .nuxt

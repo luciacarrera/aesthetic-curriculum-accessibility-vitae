@@ -1,0 +1,14 @@
+<section class="text-sm text-justify leading-4">
+  <h2 class="text-lg font-semibold mb-1">
+    {{section.title}}
+  </h2>
+  {{#if section.nestedInformation}}
+  <dl class="flex flex-col gap-3">
+    {{#each section.nestedInformation}}
+    {{> nestedDetails details=this}}
+    {{/each}}
+  </dl>
+  {{else}}
+  {{> simpleDetails details=section.details}}
+  {{/if}}
+</section>

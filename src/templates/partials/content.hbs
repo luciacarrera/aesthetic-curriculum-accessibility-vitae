@@ -1,0 +1,9 @@
+<div class="flex flex-col justify-between h-full">
+  {{#each content}} {{> section section=this }} {{/each}} 
+
+  {{#if contentFooter }}
+  <footer class="pt-4 text-xs text-justify text-slate-800">
+    {{{ contentFooter }}}
+  </footer>
+  {{/if}}
+</div>

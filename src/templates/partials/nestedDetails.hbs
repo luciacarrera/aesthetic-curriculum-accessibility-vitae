@@ -1,0 +1,24 @@
+<div class="flex flex-col gap-1 text-justify">
+  <div class="flex justify-between gap-1">
+    <dt class="font-semibold">
+      {{ details.title }}
+    </dt>
+    {{#if details.date }}
+    <dd>
+      {{ details.date }}
+    </dd>
+    {{/if}}
+  </div>
+  {{#if details.subtitle }}
+  <dd>
+    {{ details.subtitle }}
+  </dd>
+  {{/if}} 
+  {{#if details.nestedDetails }} 
+  {{#each details.nestedDetails }}
+  <dd>
+   {{> simpleDetails details=this }}
+  </dd>
+  {{/each}} 
+  {{/if}}
+</div>
