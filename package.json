@@ -4,8 +4,10 @@
   "description": "Aesthetic &amp; Accessible CVs.",
   "main": "index.js",
   "scripts": {
-    "build:css": "tailwindcss -i ./src/styles/input.css -o ./out/tailwind.css --minify && node scripts/strip-prince-unsupported-css.mjs",
-    "pdf:ua": "npm run build:css && tsx src/generate-ua.ts",
+    "build:css": "tailwindcss -i ./src/styles/input.css -o ./out/tailwind.css --minify && node src/scripts/strip-prince-unsupported-css.mjs",
+    "build:html": "tsx src/scripts/generate-html.ts",
+    "build:pdf": "tsx src/scripts/generate-pdf.ts",
+    "pdf": "npm run build:css && npm run build:html && npm run build:pdf",
     "format": "prettier --write \"src/**/*.{hbs,handlebars,html,css,js,ts,json,md}\""
   },
   "repository": {

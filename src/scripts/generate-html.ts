@@ -25,17 +25,6 @@ async function registerPartials() {
   }
 }
 
-function execFileAsync(cmd: string, args: string[]) {
-  return new Promise<void>((resolve, reject) => {
-    execFile(cmd, args, (err, stdout, stderr) => {
-      if (stdout) process.stdout.write(stdout);
-      if (stderr) process.stderr.write(stderr);
-      if (err) reject(err);
-      else resolve();
-    });
-  });
-}
-
 async function renderHtml(
   data: Record<string, unknown>,
   templateSrc: string,
@@ -77,27 +66,8 @@ async function main() {
   await fs.mkdir(outDir, { recursive: true });
 
   const htmlPath = path.join(outDir, 'document-ua.html');
-  const pdfPath = path.join(outDir, 'document-ua.pdf');
   await fs.writeFile(htmlPath, html, 'utf8');
-
-  // 6) Generate PDF/UA-1 (Tagged PDF → StructTreeRoot)
-  // Tagged PDF is automatically enabled with PDF/UA-1 profile. :contentReference[oaicite:1]{index=1}
-  await execFileAsync('prince', [
-    htmlPath,
-    '-o',
-    pdfPath,
-    '--pdf-profile=PDF/UA-1',
-    '--pdf-title',
-    `${data['name']}-curriculum vitae`,
-    '--pdf-author',
-    data['name'] as string,
-    '--pdf-keywords',
-    'curriculum vitae, CV, résumé, accessible, PDF/UA',
-    '--pdf-subject',
-    'Curriculum Vitae in PDF/UA format',
-  ]);
-  console.log(root);
-  console.log(`✅ PDF/UA generated: ${pdfPath}`);
+  console.log(`✅ HTML generated: ${htmlPath}`);
 }
 
 main().catch((err) => {
