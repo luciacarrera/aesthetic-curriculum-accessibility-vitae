@@ -1,6 +1,7 @@
 # CA-VA templates
 
 Curriculum Aesthetic - Vitally Accessibile templates.
+
 Making curriculums cute without forgetting about all our visually impaired internet friends.
 
 ## Requirements
