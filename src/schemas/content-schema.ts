@@ -2,7 +2,7 @@ const detailsItemsSchema = {
   oneOf: [{ type: 'string' }, { type: 'array', items: { type: 'string' } }],
 };
 
-const simpleDetailsSchema = {
+const simpleDetailsOrSectionSchema = {
   type: 'object',
   properties: {
     title: { type: 'string' },
@@ -11,7 +11,7 @@ const simpleDetailsSchema = {
   required: ['title', 'details'],
 };
 
-const nestedDetailsSchema = {
+const complexDetailsSchema = {
   type: 'object',
   properties: {
     title: { type: 'string' },
@@ -25,14 +25,13 @@ const nestedDetailsSchema = {
   required: ['title', 'nestedDetails'],
 };
 
-const nestedInformationSchema = {
+const nestedSectionSchema = {
   type: 'object',
   properties: {
     title: { type: 'string' },
-    date: { type: 'string' },
     nestedInformation: {
       type: 'array',
-      items: { oneOf: [nestedDetailsSchema, simpleDetailsSchema] },
+      items: { oneOf: [complexDetailsSchema, simpleDetailsOrSectionSchema] },
     },
   },
   required: ['title', 'nestedInformation'],
@@ -41,6 +40,6 @@ const nestedInformationSchema = {
 export const contentSchema = {
   type: 'array',
   items: {
-    oneOf: [simpleDetailsSchema, nestedInformationSchema],
+    oneOf: [simpleDetailsOrSectionSchema, nestedSectionSchema],
   },
 };
