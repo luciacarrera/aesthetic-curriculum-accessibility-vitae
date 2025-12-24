@@ -1,13 +1,14 @@
 import fs from 'node:fs/promises';
 import path from 'node:path';
 import Handlebars from 'handlebars';
-import { execFile } from 'node:child_process';
+import { stripPrinceUnsupportedCss } from '../utils/strip-prince-unsupported-css';
+import { assertValidCvInformation } from '../utils/validate-json';
 
 Handlebars.registerHelper('isArray', (value) => Array.isArray(value));
 
 async function buildTailwindCss(): Promise<string> {
-  // Assumes you ran `npm run build:css` first.
-  const cssPath = path.join(process.cwd(), 'out', 'tailwind.prince.css');
+  const cleanTailwindCssPath = await stripPrinceUnsupportedCss();
+  const cssPath = path.join(process.cwd(), cleanTailwindCssPath);
   return fs.readFile(cssPath, 'utf8');
 }
 
@@ -31,7 +32,6 @@ async function renderHtml(
   tailwindCss: string,
 ): Promise<string> {
   const template = Handlebars.compile(templateSrc);
-
   return template({ ...data, tailwindCss });
 }
 
@@ -54,7 +54,9 @@ async function main() {
     fs.readFile(dataPath, 'utf8'),
     buildTailwindCss(),
   ]);
+
   const data = JSON.parse(dataSrc) as Record<string, unknown>;
+  assertValidCvInformation(data);
 
   // Ensure out/ exists
   await fs.mkdir(path.dirname(outputPdfPath), { recursive: true });

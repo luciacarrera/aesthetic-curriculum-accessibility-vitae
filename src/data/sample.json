@@ -17,106 +17,110 @@
       "value": "+81 001 22 44 55"
     }
   },
-  "asideLabel": "Additional Information",
-  "asideContent": [
-    {
-      "title": "About Me",
-      "details": "Experienced race car driver. Passionate about speed and competition. Skilled in vehicle dynamics and race strategy."
-    },
-    {
-      "title": "Languages",
-      "details": ["Native Japanese", "Intermediate English"]
-    },
-    {
-      "title": "Transversal",
-      "nestedInformation": [
-        {
-          "title": "Scout",
-          "nestedDetails": ["Toad Villages"],
-          "date": "2023"
-        },
-        {
-          "title": "Shop assistant",
-          "nestedDetails": ["Coconut mall"],
-          "date": "2021"
-        },
-        {
-          "title": "School Support",
-          "nestedDetails": ["Private tutoring for primary school children"],
-          "date": "2017"
-        }
-      ]
-    },
-    {
-      "title": "Skills",
-      "details": ["Empathy", "Active listening", "Proactivity", "Teamwork"]
-    }
-  ],
-  "mainContent": [
-    {
-      "title": "Experience in race driving",
-      "nestedInformation": [
-        {
-          "title": "Mushroom Cup Circuit",
-          "subtitle": "Lead Driver.",
-          "date": "2022 - Present",
-          "nestedDetails": [
-            [
-              "Competed in various races and championships, demonstrating exceptional driving skills and strategic thinking.",
-              "Collaborated with the pit crew to optimize vehicle performance and race strategies."
+  "aside": {
+    "label": "Additional Information",
+    "content": [
+      {
+        "title": "About Me",
+        "details": "Experienced race car driver. Passionate about speed and competition. Skilled in vehicle dynamics and race strategy."
+      },
+      {
+        "title": "Languages",
+        "details": ["Native Japanese", "Intermediate English"]
+      },
+      {
+        "title": "Transversal",
+        "nestedInformation": [
+          {
+            "title": "Scout",
+            "nestedDetails": ["Toad Villages"],
+            "date": "2023"
+          },
+          {
+            "title": "Shop assistant",
+            "nestedDetails": ["Coconut mall"],
+            "date": "2021"
+          },
+          {
+            "title": "School Support",
+            "nestedDetails": ["Private tutoring for primary school children"],
+            "date": "2017"
+          }
+        ]
+      },
+      {
+        "title": "Skills",
+        "details": ["Empathy", "Active listening", "Proactivity", "Teamwork"]
+      }
+    ]
+  },
+  "main": {
+    "content": [
+      {
+        "title": "Experience in race driving",
+        "nestedInformation": [
+          {
+            "title": "Mushroom Cup Circuit",
+            "subtitle": "Lead Driver.",
+            "date": "2022 - Present",
+            "nestedDetails": [
+              [
+                "Competed in various races and championships, demonstrating exceptional driving skills and strategic thinking.",
+                "Collaborated with the pit crew to optimize vehicle performance and race strategies."
+              ]
             ]
-          ]
-        },
-        {
-          "title": "Flower Cup",
-          "subtitle": "Junior Driver.",
-          "date": "2020 - 2022",
-          "nestedDetails": [
-            [
-              "Participated in local races, gaining valuable experience and honing driving techniques.",
-              "Assisted in vehicle maintenance and setup to ensure optimal performance during races."
+          },
+          {
+            "title": "Flower Cup",
+            "subtitle": "Junior Driver.",
+            "date": "2020 - 2022",
+            "nestedDetails": [
+              [
+                "Participated in local races, gaining valuable experience and honing driving techniques.",
+                "Assisted in vehicle maintenance and setup to ensure optimal performance during races."
+              ]
             ]
-          ]
-        },
-        {
-          "title": "Star Cup",
-          "subtitle": "Intern Driver.",
-          "date": "2018 - 2020",
-          "nestedDetails": [
-            [
-              "Supported senior drivers during races and practice sessions.",
-              "Learned the fundamentals of race car driving and vehicle dynamics."
+          },
+          {
+            "title": "Star Cup",
+            "subtitle": "Intern Driver.",
+            "date": "2018 - 2020",
+            "nestedDetails": [
+              [
+                "Supported senior drivers during races and practice sessions.",
+                "Learned the fundamentals of race car driving and vehicle dynamics."
+              ]
             ]
-          ]
-        }
-      ]
-    },
-    {
-      "title": "Education",
-      "nestedInformation": [
-        {
-          "title": "Racing Academy",
-          "subtitle": "Diploma in Advanced Race Car Driving.",
-          "date": "2016 - 2018",
-          "nestedDetails": [
-            [
-              "Completed a comprehensive program covering advanced driving techniques, vehicle dynamics, and race strategy.",
-              "Graduated with honors, recognized for exceptional performance and dedication."
+          }
+        ]
+      },
+      {
+        "title": "Education",
+        "nestedInformation": [
+          {
+            "title": "Racing Academy",
+            "subtitle": "Diploma in Advanced Race Car Driving.",
+            "date": "2016 - 2018",
+            "nestedDetails": [
+              [
+                "Completed a comprehensive program covering advanced driving techniques, vehicle dynamics, and race strategy.",
+                "Graduated with honors, recognized for exceptional performance and dedication."
+              ]
             ]
-          ]
-        },
-        {
-          "title": "Speedway High School",
-          "subtitle": "High School Diploma.",
-          "date": "2012 - 2016",
-          "nestedDetails": [
-            [
-              "Focused on physical education and extracurricular activities related to motorsports.",
-              "Participated in various school events and competitions, showcasing leadership and teamwork skills."
+          },
+          {
+            "title": "Speedway High School",
+            "subtitle": "High School Diploma.",
+            "date": "2012 - 2016",
+            "nestedDetails": [
+              [
+                "Focused on physical education and extracurricular activities related to motorsports.",
+                "Participated in various school events and competitions, showcasing leadership and teamwork skills."
+              ]
             ]
-          ]
-        }
-      ]
-    }
-  ]
+          }
+        ]
+      }
+    ]
+  }
 }

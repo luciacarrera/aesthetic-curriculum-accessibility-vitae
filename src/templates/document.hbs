@@ -54,13 +54,12 @@
         {{/if}}
     </header>
     
-    <aside aria-label="{{asideLabel}}" class="col-span-2 pb-10 pl-12 pr-8 pt-2 bg-green-700/50 h-full">
-        {{> content content=asideContent contentFooter=footer photo="photo"}}
-
+    <aside aria-label="{{aside.label}}" class="col-span-2 pb-10 pl-12 pr-8 pt-2 bg-green-700/50 h-full">
+        {{> content content=aside.content contentFooter=footer}}
     </aside>
     
     <main class="col-span-4 pr-12 pl-8 pb-10 pt-2 h-full">
-        {{> content content=mainContent}}
+        {{> content content=main.content}}
     </main>
 </body>
 

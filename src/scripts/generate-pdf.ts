@@ -1,6 +1,5 @@
 import fs from 'node:fs/promises';
 import path from 'node:path';
-import Handlebars from 'handlebars';
 import { execFile } from 'node:child_process';
 
 function execFileAsync(cmd: string, args: string[]) {
