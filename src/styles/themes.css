@@ -1,0 +1,64 @@
+/* Default theme (fallback) */
+:root {
+  /* background colors */
+  --photo: 21 128 61 / 0.5;
+  --aside: 21 128 61 / 0.5;
+  --main: 0 0 0 / 0;
+  --header: 0 0 0 / 0;
+
+  /* section text bg colors */
+  --main-headers: 21 128 61 / 0.5;
+  --aside-headers: 0 0 0 / 0;
+  --name: 0 0 0 / 0;
+  --brief-description: 0 0 0 / 0;
+  --bold: 0 0 0 / 0;
+
+  /* text colors */
+  --text: 31 41 55;
+  --text-footer: 30 41 59;
+}
+
+/* Theme: Ocean */
+[data-theme='ocean'] {
+  /* background colors */
+  --aside: 243 244 246;
+  --aside-headers: 30 41 59;
+  --main: 255 255 255;
+  --main-headers: 59 130 246;
+  --header: 255 255 255;
+  --photo: 243 244 246;
+  --bold: 17 24 39;
+
+  /* text colors */
+  --text: 31 41 55;
+}
+
+/* Theme: Rose */
+[data-theme='rose'] {
+  /* background colors */
+  --aside: 243 244 246;
+  --aside-headers: 30 41 59;
+  --main: 255 255 255;
+  --main-headers: 59 130 246;
+  --header: 255 255 255;
+  --photo: 243 244 246;
+  --bold: 17 24 39;
+
+  /* text colors */
+  --text: 31 41 55;
+}
+
+/* Theme: Slate */
+[data-theme='slate'] {
+  /* background colors */
+  --aside: 243 244 246;
+  --aside-headers: 30 41 59;
+  --main: 255 255 255;
+  --main-headers: 59 130 246;
+  --header: 255 255 255;
+  --photo: 243 244 246;
+  --bold: 17 24 39;
+
+  /* text colors */
+  --text: 31 41 55;
+}

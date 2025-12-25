@@ -1,5 +1,5 @@
 <section class="text-sm text-justify leading-4">
-  <h2 class="text-lg font-semibold mb-1">
+  <h2 class="text-lg font-semibold mb-1 {{#if isMain}}bg-main-headers{{else}}bg-aside-headers{{/if}}">
     {{section.title}}
   </h2>
   {{#if section.nestedInformation}}
