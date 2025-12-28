@@ -20,7 +20,7 @@
 
 </head>
 
-<body class="min-h-screen font-sans grid grid-cols-6 tracking-tight grid-rows-auto text-text">
+<body class="min-h-screen font-sans grid grid-cols-6 tracking-tight grid-rows-auto text-normal">
     {{#if photo}}
     <div class="col-span-2 pt-page-y px-page-x flex items-center justify-center bg-photo">
         <img src="{{photo.src}}" alt="{{photo.alt}}" class="w-36 h-36 object-cover object-center rounded-full" />
@@ -29,8 +29,8 @@
     
     <header class="bg-header mt-4 col-span-4 text-justify pt-page-y pl-content pr-page-x flex flex-col gap-4 justify-center">
         <div class="flex flex-col gap-1">
-            <h1 class="p-1 bg-name text-3xl font-bold rounded-headers w-fit">{{name}}</h1>
-            <p class="p-1 bg-brief-description text-lg rounded-headers w-fit">{{briefDescription}}</p>
+            <h1 class="p-1 bg-name text-3xl font-bold rounded-all-headers w-name">{{name}}</h1>
+            <p class="p-1 bg-brief-description text-lg rounded-all-headers w-brief-description">{{briefDescription}}</p>
         </div>
         {{#if contact}}
         <div class="px-1 text-sm flex gap-2 justify-between">

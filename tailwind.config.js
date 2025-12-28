@@ -5,29 +5,33 @@ module.exports = {
     extend: {
       colors: {
         /* background colors */
-        photo: 'rgb(var(--photo))',
-        aside: 'rgb(var(--aside))',
-        main: 'rgb(var(--main))',
-        header: 'rgb(var(--header))',
+        photo: 'rgb(var(--bg-photo))',
+        aside: 'rgb(var(--bg-aside))',
+        main: 'rgb(var(--bg-main))',
+        header: 'rgb(var(--bg-header))',
 
         /* section text bg colors */
-        'main-headers': 'rgb(var(--main-headers))',
-        'aside-headers': 'rgb(var(--aside-headers))',
-        name: 'rgb(var(--name))',
-        'brief-description': 'rgb(var(--brief-description))',
-        bold: 'rgb(var(--bold))',
-
+        'main-headers': 'rgb(var(--bg-main-headers))',
+        'aside-headers': 'rgb(var(--bg-aside-headers))',
+        name: 'rgb(var(--bg-name))',
+        'brief-description': 'rgb(var(--bg-brief-description))',
+        bold: 'rgb(var(--bg-bold))',
         /* text colors */
-        text: 'rgb(var(--text) / <alpha-value>)',
-        'text-footer': 'rgb(var(--text-footer) / <alpha-value>)',
+        normal: 'rgb(var(--text-normal) / <alpha-value>)',
+        footer: 'rgb(var(--text-footer) / <alpha-value>)',
       },
       spacing: {
-        'page-x': 'var(--page-x)',
-        'page-y': 'var(--page-y)',
-        content: 'var(--content)',
+        'page-x': 'var(--padding-page-x)',
+        'page-y': 'var(--padding-page-y)',
+        content: 'var(--padding-content)',
       },
       borderRadius: {
-        headers: 'var(--rounded-headers)',
+        'all-headers': 'var(--rounded-all-headers)',
+      },
+      width: {
+        name: 'var(--width-name)',
+        'brief-description': 'var(--width-brief-description)',
+        headers: 'var(--width-headers)',
       },
     },
   },

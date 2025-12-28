@@ -23,26 +23,27 @@ Making curriculums cute without forgetting about all our visually impaired inter
 
 Variables available for modification:
 
-| Variable            | Tailwind token         | Description                                          |
-| ------------------- | ---------------------- | ---------------------------------------------------- |
-| --photo             | bg-photo               | changes photo background colour                      |
-| --aside             | bg-aside               | changes aside background colour                      |
-| --main              | bg-main                | changes main background colour                       |
-| --header            | bg-header              | changes header background colour                     |
-| --main-headers      | bg-main-headers        | changes headers in main content's background colour  |
-| --aside-headers     | bg-aside-headers       | changes headers in aside content's background colour |
-| --name              | bg-name                | changes your name's background colour                |
-| --brief-description | bg-brief-description   | changes your brief description's background colour   |
-| --text              | text-text              | changes all the normal text's colour                 |
-| --text-footer       | text-text-footer       | changes the footer's text colour                     |
-| --content           | pl-content, pr-content | changes padding between aside and main content       |
-| --                  |                        |                                                      |
-| --                  |                        |                                                      |
-| --                  |                        |                                                      |
-| --                  |                        |                                                      |
+| Variable                  | Tailwind token         | Description                                          |
+| ------------------------- | ---------------------- | ---------------------------------------------------- |
+| --bg-photo                | bg-photo               | changes photo background colour                      |
+| --bg-aside                | bg-aside               | changes aside background colour                      |
+| --bg-main                 | bg-main                | changes main background colour                       |
+| --bg-header               | bg-header              | changes header background colour                     |
+| --bg-main-headers         | bg-main-headers        | changes headers in main content's background colour  |
+| --bg-aside-headers        | bg-aside-headers       | changes headers in aside content's background colour |
+| --bg-name                 | bg-name                | changes your name's background colour                |
+| --bg-brief-description    | bg-brief-description   | changes your brief description's background colour   |
+| --text-normal             | text-text              | changes all the normal text's colour                 |
+| --text-footer             | text-text-footer       | changes the footer's text colour                     |
+| --padding-content         | pl-content, pr-content | changes padding between aside and main content       |
+| --rounded-all-headers     | rounded-all-headers    | changes rounded corners in all headers               |
+| --width-name              | w-name                 | changes name's width                                 |
+| --width-brief-description | w-brief-description    | changes brief description's width                    |
+| --width-headers           | w-headers              | changes main and aside headers' width                |
+| --                        |                        |                                                      |
 
 > [!CAUTION]
-> Technically `--page-x` and `--page-y` tokens are available for modification but I recommend you do not modify them as your cv might not be printable.
+> Technically `--padding-page-x` and `--padding-page-y` tokens are available for modification but I recommend you do not modify them as your cv might not be printable.
 
 ## How to modify the html then generate the pdf
 
