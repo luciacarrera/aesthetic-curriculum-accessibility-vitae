@@ -20,30 +20,32 @@
 
 </head>
 
-<body class="min-h-screen font-sans grid grid-cols-6 tracking-tight grid-rows-auto text-normal">
-    {{#if photo}}
-    <div class="col-span-2 pt-page-y px-page-x flex items-center justify-center bg-photo">
-        <img src="{{photo.src}}" alt="{{photo.alt}}" class="w-36 h-36 object-cover object-center rounded-full" />
-    </div>
-    {{/if}}
-    
-    <header class="bg-header mt-4 col-span-4 text-justify pt-page-y pl-content pr-page-x flex flex-col gap-4 justify-center">
-        <div class="flex flex-col gap-1">
-            <h1 class="p-1 bg-name text-3xl font-bold rounded-all-headers w-name">{{name}}</h1>
-            <p class="p-1 bg-brief-description text-lg rounded-all-headers w-brief-description">{{briefDescription}}</p>
-        </div>
-        {{#if contact}}
-        {{> contact contact=contact}}
-        {{/if}}
-    </header>
-    
-    <aside aria-label="{{aside.label}}" class="col-span-2 pb-page-y pl-page-x pr-content pt-2 bg-aside h-full">
-        {{> content content=aside.content contentFooter=footer isMain=false}}
+<body class="min-h-screen font-sans grid grid-cols-6 tracking-tight grid-rows-[auto_1fr] text-normal py-page-y px-page-x">
+
+{{#if (eq layout "E")}}
+    <header class="h-32 bg-header pl-content row-start-1 col-start-3 col-span-4 text-justify flex flex-col gap-2">
+        {{> header name=name briefDescription=briefDescription contact=contact}}
+    </header>  
+
+    <aside aria-label="{{aside.label}}" class="row-span-2 col-start-1 col-span-2 pr-content bg-aside">
+        {{> content content=aside.content contentFooter=footer isMain=false profilePhoto=photo }}
     </aside>
-    
-    <main class="col-span-4 pr-page-x pl-content pb-page-y pt-2 h-full bg-main">
-        {{> content content=main.content isMain=true}}
+
+    <main class="col-span-4 col-start-3 row-start-2 pt-content pl-content bg-main">
+        {{> content content=main.content isMain=true }}
     </main>
+{{else}}
+
+    <header class="max-h-36 bg-header col-span-6 text-justify pt-page-y pl-content pr-page-x flex flex-col gap-2 justify-center">
+        {{> header name=name briefDescription=briefDescription contact=contact photo=photo}}
+    </header>
+    <main class="col-span-4 pr-page-x pl-content py-page-y h-full bg-main">
+        {{> content content=main.content isMain=true photo=photo}}
+    </main>
+    <aside aria-label="{{aside.label}}" class="col-span-2 py-page-y pl-page-x pr-content bg-aside h-full">
+        {{> content content=aside.content contentFooter=footer isMain=false }}
+    </aside>    
+{{/if}}
 </body>
 
 </html>

@@ -5,6 +5,7 @@ import { stripPrinceUnsupportedCss } from '../utils/strip-prince-unsupported-css
 import { assertValidCvInformation } from '../utils/validate-json';
 
 Handlebars.registerHelper('isArray', (value) => Array.isArray(value));
+Handlebars.registerHelper('eq', (a, b) => a === b);
 
 async function buildTailwindCss(): Promise<string> {
   const cleanTailwindCssPath = await stripPrinceUnsupportedCss();

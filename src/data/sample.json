@@ -1,5 +1,6 @@
 {
   "language": "en",
+  "layout": "E",
   "name": "Princess Daisy",
   "briefDescription": "Race car driver.",
   "photo": {
@@ -53,6 +54,13 @@
       {
         "title": "Skills",
         "details": ["Empathy", "Active listening", "Proactivity", "Teamwork"]
+      },
+      {
+        "title": "Certifications",
+        "details": [
+          "Certified Race Car Driver - International Racing Federation (2021)",
+          "Advanced Vehicle Dynamics Certification - Racing Academy (2019)"
+        ]
       }
     ]
   },
@@ -120,6 +128,16 @@
                 "Participated in various school events and competitions, showcasing leadership and teamwork skills."
               ]
             ]
+          }
+        ]
+      },
+      {
+        "title": "Volunteer Work",
+        "nestedInformation": [
+          {
+            "title": "Mario Kart Community Center",
+            "nestedDetails": ["Volunteer Instructor."],
+            "date": "2019 - Present"
           }
         ]
       }

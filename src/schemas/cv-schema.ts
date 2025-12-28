@@ -6,6 +6,7 @@ export const cvSchema = {
   type: 'object',
   additionalProperties: false,
   properties: {
+    layout: { type: 'string', enum: ['E', 'F'] },
     language: { type: 'string' },
     name: { type: 'string' },
     briefDescription: { type: 'string' },

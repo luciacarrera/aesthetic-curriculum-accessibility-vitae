@@ -1,0 +1,7 @@
+<div class="flex flex-col gap-1 items-start">
+            <h1 class="p-1 bg-name text-3xl font-bold rounded-all-headers w-name">{{name}}</h1>
+            <p class="p-1 bg-brief-description text-lg rounded-all-headers w-brief-description">{{briefDescription}}</p>
+</div>
+    {{#if contact}}
+        {{> contact contact=contact}}
+    {{/if}}
