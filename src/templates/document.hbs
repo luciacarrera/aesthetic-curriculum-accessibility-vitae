@@ -24,7 +24,7 @@
 
 {{#if (eq layout "E")}}
 
-    <header class="bg-header h-[10.5rem] pl-photo pt-page-y px-page-x row-start-1 col-start-3 col-span-4 text-justify flex flex-col gap-2">
+    <header class="bg-header h-[10.5rem] pl-photo pt-page-y px-page-x row-start-1 col-start-3 col-span-4">
         {{> header name=name briefDescription=briefDescription contact=contact}}
     </header>  
 
@@ -38,8 +38,8 @@
 
 {{else}}
 
-    <header class="bg-header pb-content pt-page-y px-page-x col-span-6 text-justify flex flex-col gap-2">
-        {{> header name=name briefDescription=briefDescription contact=contact}}
+    <header class="bg-header pb-content pt-page-y px-page-x col-span-6 grid grid-cols-6">
+        {{> header name=name briefDescription=briefDescription contact=contact profilePhoto=photo}}
     </header>  
 
     <main class="col-span-4 col-start-3 row-start-2 pt-content pl-content pb-page-y pr-page-x bg-main">
