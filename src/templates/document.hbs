@@ -23,6 +23,7 @@
 <body class="min-h-screen font-sans grid grid-cols-6 tracking-tight grid-rows-[auto_1fr] text-normal">
 
 {{#if (eq layout "E")}}
+
     <header class="bg-header h-[10.5rem] pl-photo pt-page-y px-page-x row-start-1 col-start-3 col-span-4 text-justify flex flex-col gap-2">
         {{> header name=name briefDescription=briefDescription contact=contact}}
     </header>  
@@ -37,15 +38,15 @@
 
 {{else}}
 
-    <header class="bg-header pb-content mb-content pt-page-y px-page-x col-span-6 text-justify flex flex-col gap-2">
+    <header class="bg-header pb-content pt-page-y px-page-x col-span-6 text-justify flex flex-col gap-2">
         {{> header name=name briefDescription=briefDescription contact=contact}}
     </header>  
 
-    <main class="col-span-4 col-start-3 row-start-2 pl-content pb-page-y pr-page-x bg-main">
+    <main class="col-span-4 col-start-3 row-start-2 pt-content pl-content pb-page-y pr-page-x bg-main">
         {{> content content=main.content isMain=true }}
     </main>
 
-    <aside aria-label="{{aside.label}}" class="row-span-2 col-start-1 col-span-2 pr-content pb-page-y pl-page-x bg-aside">
+    <aside aria-label="{{aside.label}}" class="row-span-2 col-start-1 col-span-2 pt-content pr-content pb-page-y pl-page-x bg-aside">
         {{> content content=aside.content contentFooter=footer isMain=false }}
     </aside>
 

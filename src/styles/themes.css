@@ -1,9 +1,9 @@
 /* Default theme (fallback) */
 :root {
   /* background colors */
-  --bg-aside: 21 128 61 / 0.5;
+  --bg-aside: 134 239 172 / 0.5;
   --bg-main: 0 0 0 / 0;
-  --bg-header: 0 0 0 / 0;
+  --bg-header: 21 128 61 / 0.5;
 
   /* section text bg colors */
   --bg-main-headers: 21 128 61 / 0.5; /* green-600 with 50% opacity */
