@@ -3,7 +3,7 @@
     {{section.title}}
   </h2>
   {{#if section.nestedInformation}}
-  <dl class="flex flex-col gap-3">
+  <dl class="flex flex-col gap-3 w-full">
     {{#each section.nestedInformation}}
     {{> nestedDetails details=this}}
     {{/each}}

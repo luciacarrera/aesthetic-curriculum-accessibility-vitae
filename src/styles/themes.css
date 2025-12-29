@@ -11,6 +11,7 @@
   --bg-main-headers: 21 128 61 / 0.5; /* green-600 with 50% opacity */
   --bg-aside-headers: 21 128 61 / 0.5;
   --bg-bold: 21 128 61 / 0.5;
+  --bg-footer: 0 0 0 / 0;
 
   /* text colors */
   --text-normal: 31 41 55;
@@ -61,6 +62,7 @@
   --bg-main-headers: 21 128 61 / 0.5;
   --bg-aside-headers: 21 128 61 / 0.5;
   --bg-bold: 21 128 61 / 0.5;
+  --bg-footer: 21 128 61 / 0.5;
 
   /** width **/
   --width-headers: 100%;

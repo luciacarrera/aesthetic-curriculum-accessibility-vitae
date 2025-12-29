@@ -1,10 +1,11 @@
 {
   "language": "en",
   "theme": "grass-headers",
-  "layout": "E",
+  "layout": "T",
   "name": "Princess Daisy",
   "briefDescription": "Race car driver.",
-  "footer": "This CV has been designed using CAVA templates, prioritizing accessibility.",
+
+  "footer": "Designed with CA-VA templates, prioritizing accessibility.",
   "contact": [
     {
       "icon": { "src": "assets/email.svg", "alt": "Email" },
@@ -22,6 +23,7 @@
     "content": [
       {
         "title": "About Me",
+
         "details": "Experienced race car driver. Passionate about speed and competition. Skilled in vehicle dynamics and race strategy."
       },
       {

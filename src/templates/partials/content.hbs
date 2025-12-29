@@ -4,14 +4,8 @@
     </div>
 {{/if}}
 
-<div class="flex flex-col justify-between h-full ">
+<div class="grow flex flex-col justify-between">
 
 {{#each content}} {{> section section=this isMain=../isMain}} {{/each}} 
-
-{{#if contentFooter }}
-  <footer class="text-xs text-justify text-footer">
-    {{{ contentFooter }}}
-  </footer>
-{{/if}}
 
 </div>  

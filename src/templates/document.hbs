@@ -28,13 +28,20 @@
         {{> header name=name briefDescription=briefDescription contact=contact}}
     </header>  
 
-    <main class="col-span-4 col-start-3 row-start-2 pb-page-y pr-page-x pt-photo pl-content-x bg-main">
+    <main class="col-span-4 col-start-3 row-start-2 pb-page-y pr-page-x pt-photo pl-content-x bg-main flex flex-col justify-between">
         {{> content content=main.content isMain=true }}
     </main>
 
-    <aside aria-label="{{aside.label}}" class="row-span-2 col-start-1 col-span-2 pr-content-x pt-page-y pb-page-y pl-page-x bg-aside">
-        {{> content content=aside.content contentFooter=footer isMain=false profilePhoto=photo }}
-    </aside>
+    <div class="row-span-2 col-start-1 col-span-2 pr-content-x pt-page-y pb-page-y pl-page-x bg-aside flex flex-col gap-4 h-full">
+        
+        <aside aria-label="{{aside.label}}" class="grow flex flex-col">
+            {{> content content=aside.content isMain=false profilePhoto=photo }}
+        </aside>
+
+        <footer class="text-xs text-justify text-soft bg-footer rounded p-1">
+            {{{ footer }}}
+        </footer>
+    </div>
 
 {{else}}
 
@@ -42,13 +49,19 @@
         {{> header name=name briefDescription=briefDescription contact=contact profilePhoto=photo}}
     </header>  
 
-    <main class="col-span-4 col-start-3 row-start-2 pt-content-y pl-content-x pb-page-y pr-page-x bg-main flex flex-col">
+    <main class="col-span-4 col-start-3 row-start-2 pt-content-y pl-content-x pb-page-y pr-page-x bg-main flex flex-col justify-between">
         {{> content content=main.content isMain=true }}
     </main>
 
-    <aside aria-label="{{aside.label}}" class="row-span-2 col-start-1 col-span-2 pt-content-y pr-content-x pb-page-y pl-page-x bg-aside flex flex-col ">
-        {{> content content=aside.content contentFooter=footer isMain=false }}
-    </aside>
+    <div class="row-span-2 col-start-1 col-span-2 pt-content-y pr-content-x pb-page-y pl-page-x bg-aside flex flex-col gap-4 h-full">
+        <aside aria-label="{{aside.label}}" class="grow flex flex-col">
+            {{> content content=aside.content contentFooter=footer isMain=false }}
+        </aside>
+
+        <footer class="text-xs text-justify text-soft bg-footer rounded p-1">
+            {{{ footer }}}
+        </footer>
+    </div>
 
 {{/if}}
 </body>

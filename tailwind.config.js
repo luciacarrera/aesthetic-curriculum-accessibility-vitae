@@ -16,9 +16,10 @@ module.exports = {
         name: 'rgb(var(--bg-name))',
         'brief-description': 'rgb(var(--bg-brief-description))',
         bold: 'rgb(var(--bg-bold))',
+        footer: 'rgb(var(--bg-footer))',
         /* text colors */
         normal: 'rgb(var(--text-normal) / <alpha-value>)',
-        footer: 'rgb(var(--text-footer) / <alpha-value>)',
+        soft: 'rgb(var(--text-footer) / <alpha-value>)',
       },
       spacing: {
         'page-x': 'var(--padding-page-x)',
