@@ -14,11 +14,19 @@ function execFileAsync(cmd: string, args: string[]) {
 }
 
 async function main() {
+  const args = process.argv.slice(2);
+  const filename = args[0];
+  if (!filename) {
+    throw new Error(
+      'JSON filename argument is required. Ex: npm run pdf -- sample',
+    );
+  }
   const root = process.cwd();
 
-  const dataPath = path.join(process.cwd(), 'src', 'data', 'sample.json');
-
-  const dataSrc = await fs.readFile(dataPath, 'utf8');
+  const dataPath = path.join(process.cwd(), 'src', 'data', `${filename}.json`);
+  const dataSrc = await fs.readFile(dataPath, 'utf8').catch(() => {
+    throw new Error(`Data file not found: ${dataPath}`);
+  });
   const data = JSON.parse(dataSrc) as Record<string, unknown>;
 
   const kebabName = (data['name'] as string)

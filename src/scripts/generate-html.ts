@@ -3,21 +3,10 @@ import path from 'node:path';
 import Handlebars from 'handlebars';
 import { stripPrinceUnsupportedCss } from '../utils/strip-prince-unsupported-css';
 import { assertValidCvInformation } from '../utils/validate-json';
-import safeParser from 'postcss-safe-parser';
-import postcss from 'postcss';
 import { Theme } from '../utils/enums';
 
 Handlebars.registerHelper('isArray', (value) => Array.isArray(value));
 Handlebars.registerHelper('eq', (a, b) => a === b);
-
-// function setTheme(theme: Theme, tailwindCss: string) {
-//   const tailwindRoot = postcss().process(tailwindCss, {
-//     parser: safeParser,
-//   }).root;
-//   if (theme !== 'default') {
-//     document.documentElement.setAttribute('data-theme', theme);
-//   }
-// }
 
 async function buildTailwindCss(): Promise<string> {
   const cleanTailwindCssPath = await stripPrinceUnsupportedCss();
@@ -49,6 +38,13 @@ async function renderHtml(
 }
 
 async function main() {
+  const args = process.argv.slice(2);
+  const filename = args[0];
+  if (!filename) {
+    throw new Error(
+      'JSON filename argument is required. Ex: npm run pdf -- sample',
+    );
+  }
   const root = process.cwd();
 
   const templatePath = path.join(
@@ -57,14 +53,19 @@ async function main() {
     'templates',
     'document.hbs',
   );
-  const dataPath = path.join(process.cwd(), 'src', 'data', 'sample.json');
+  const dataPath = path.join(process.cwd(), 'src', 'data', `${filename}.json`);
+
   const outputPdfPath = path.join(process.cwd(), 'out', 'document.pdf');
 
   await registerPartials();
 
   const [templateSrc, dataSrc] = await Promise.all([
-    fs.readFile(templatePath, 'utf8'),
-    fs.readFile(dataPath, 'utf8'),
+    fs.readFile(templatePath, 'utf8').catch(() => {
+      throw new Error(`Template file not found: ${templatePath}`);
+    }),
+    fs.readFile(dataPath, 'utf8').catch(() => {
+      throw new Error(`Data file not found: ${dataPath}`);
+    }),
   ]);
 
   const data = JSON.parse(dataSrc) as Record<string, unknown>;

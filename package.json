@@ -7,7 +7,7 @@
     "build:css": "tailwindcss -i ./src/styles/input.css -o ./out/tailwind.css --minify",
     "build:html": "tsx src/scripts/generate-html.ts",
     "build:pdf": "tsx src/scripts/generate-pdf.ts",
-    "pdf": "npm run build:css && npm run build:html && npm run build:pdf",
+    "pdf": "bash -lc 'npm run build:css && npm run build:html -- \"$@\" && npm run build:pdf -- \"$@\"' --",
     "pdf:custom": "npm run build:css && npm run build:html",
     "format": "prettier --write \"src/**/*.{hbs,handlebars,html,css,js,ts,json,md}\""
   },

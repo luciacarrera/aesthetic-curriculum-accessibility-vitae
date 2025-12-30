@@ -14,7 +14,10 @@ Making curriculums cute without forgetting about all our visually impaired inter
 2. Execute `npm install`
 3. Fill in `sample.json` with your data
 4. If you wish to include a photo add it to the `out/assets` folder and add pathname to `sample.json`.
-5. Execute `npm run pdf`
+5. Execute `npm run pdf -- JSON_FILENAME`
+
+> [!WARNING]
+> Please substitute `JSON_FILENAME` for the name of your json file. Ex: `npm run pdf -- sample`. Do NOT include the `.json`.
 
 ## Available layouts
 
@@ -56,9 +59,12 @@ Variables available for modification:
 
 I recommend creating your own theme instead of this, but if you wish to add features directly to the html, you should do steps 1-4 from the How to (simple) then:
 
-5. Execute `npm run pdf:custom`
+5. Execute `npm run pdf:custom -- JSON_FILENAME`
 6. Edit the html to your liking in `out/document-ua.html`
-7. Then `npm run build:pdf`.
+7. Then `npm run build:pdf -- JSON_FILENAME`.
+
+> [!WARNING]
+> Please substitute `JSON_FILENAME` for the name of your json file. Ex: `npm run pdf -- sample`. Do NOT include the `.json`.
 
 ## Check compliance
 
