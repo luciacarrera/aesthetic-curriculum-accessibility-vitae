@@ -22,7 +22,7 @@ const complexDetailsSchema = {
       items: detailsItemsSchema,
     },
   },
-  required: ['title', 'nestedDetails'],
+  required: ['title'],
 };
 
 const nestedSectionSchema = {

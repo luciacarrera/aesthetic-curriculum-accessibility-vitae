@@ -2,8 +2,8 @@
   {{#if icon}}
     <img src="{{icon.src}}" alt="{{icon.alt}}" class="w-4 h-4" />
   {{/if}}
-  <p>{{#if href}}<a
+  <p class="font-mono tracking-tightest text-xs">{{#if href}}<a
         href="{{href}}"
-        class="underline underline-offset-2 font-mono tracking-tightest"
+        class="underline underline-offset-2"
       >{{value}}</a>{{else}}{{value}}{{/if}}</p>
 </div>

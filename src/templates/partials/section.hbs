@@ -1,9 +1,9 @@
-<section class="text-xs text-justify leading-4 flex flex-col items-start gap-1 mb-1">
+<section class="text-xs text-justify leading-4 flex flex-col items-start gap-2 mb-1">
   <h2 class="p-1 text-xl font-bold rounded-headers w-headers {{#if isMain}}text-tmain-headers bg-main-headers{{else}}text-taside-headers bg-aside-headers{{/if}}">
     {{section.title}}
   </h2>
   {{#if section.nestedInformation}}
-  <dl class="flex flex-col w-full gap-2">
+  <dl class="flex flex-col w-full gap-2 leading-tight m-0">
     {{#each section.nestedInformation}}
       {{> nestedDetails details=this}}
     {{/each}}
