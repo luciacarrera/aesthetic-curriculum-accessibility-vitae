@@ -5,6 +5,10 @@
   "name": "Princess Daisy",
   "briefDescription": "Race car driver.",
   "footer": "Designed with CA-VA",
+  "photo": {
+    "src": "assets/photo.jpeg",
+    "alt": "Fotografía profesional de Andrea Felip Expósito"
+  },
   "contact": [
     {
       "icon": { "src": "assets/email.svg", "alt": "Email" },

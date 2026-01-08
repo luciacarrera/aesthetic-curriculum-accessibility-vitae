@@ -77,6 +77,7 @@ async function generateHtmlFile(html: string) {
 
 async function main() {
   const data = await getJsonData();
+  console.log(data.layout);
   announceTheme(data.theme as Theme);
   const tailwindCss = await buildTailwindCss();
   await registerPartials();

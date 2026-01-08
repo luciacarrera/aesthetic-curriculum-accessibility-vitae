@@ -23,9 +23,9 @@
 
 <body data-theme="{{theme}}" class="min-h-screen font-sans grid grid-cols-6 tracking-normal grid-rows-[auto_1fr] text-tnormal font-size-xs leading-tight">
 
-{{#if (eq layout "E")}}
+{{#if (eq layout "F")}}
 
-    <header class="bg-header h-[10.5rem] pl-photo pt-page-y px-page-x row-start-1 col-start-3 col-span-4">
+    <header class="bg-header h-[10.5rem] pt-page-y pl-content-x pr-page-x row-start-1 col-start-3 col-span-4">
         {{> header name=name briefDescription=briefDescription contact=contact}}
     </header>  
 
@@ -34,7 +34,7 @@
     </main>
 
     <div class="row-span-2 col-start-1 col-span-2 pr-content-x pt-page-y pb-page-y pl-page-x bg-aside flex flex-col gap-2 h-full">
-        {{> asideContent }}
+        {{> asideContent profilePhoto=photo }}
     </div>
 
 {{else}}

@@ -39,6 +39,9 @@ module.exports = {
         'brief-description': 'var(--rounded-brief-description)',
         headers: 'var(--rounded-headers)',
       },
+      borderWidth: {
+        headers: 'var(--border-thickness-headers)',
+      },
       width: {
         name: 'var(--width-name)',
         'brief-description': 'var(--width-brief-description)',

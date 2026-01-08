@@ -32,6 +32,9 @@
   /** border radius **/
   --rounded-headers: 0.375rem; /* rounded-md */
 
+  /* border thickness **/
+  --border-thickness-headers: 0px;
+
   /** width **/
   --width-name: fit-content; /* adjust to content */
   --width-brief-description: fit-content;
@@ -44,12 +47,21 @@
   --bg-main: 0 0 0 / 0;
   --bg-header: 0 0 0 / 0;
 
-  /* section text bg colors */
+  /* section bg colors */
   --bg-name: 0 0 0 / 0;
   --bg-brief-description: 0 0 0 / 0;
   --bg-main-headers: 0 0 0 / 0; /* green-600 with 50% opacity */
   --bg-aside-headers: 0 0 0 / 0;
   --bg-bold: 21 128 61 / 0.5;
+
+  /* text colors */
+  --text-name: 12 10 9;
+  --text-main-headers: 12 10 9;
+  --text-aside-headers: 12 10 9;
+  --text-brief-description: 12 10 9;
+  --text-subheaders: 12 10 9; /* stone-950 */
+  --text-normal: 12 10 9; /* stone-700 */
+  --text-footer: 12 10 9;
 
   /** content padding **/
   --padding-content-x: 32px;
@@ -62,7 +74,7 @@
   --bg-main: 0 0 0 / 0;
   --bg-header: 0 0 0 / 0;
 
-  /* section text bg colors */
+  /* section bg colors */
   --bg-name: 0 0 0 / 0;
   --bg-brief-description: 0 0 0 / 0;
   --bg-main-headers: 21 128 61 / 0.5;
@@ -72,6 +84,37 @@
 
   /** width **/
   --width-headers: 100%;
+}
+
+[data-theme='ocean-aside'] {
+  /* background colors */
+  --bg-aside: 83 130 184 / 0.5;
+  --bg-main: 0 0 0 / 0;
+  --bg-header: 0 0 0 / 0;
+
+  /* section text bg colors */
+  --bg-name: 0 0 0 / 0;
+  --bg-brief-description: 0 0 0 / 0;
+  --bg-main-headers: 0 0 0 / 0;
+  --bg-aside-headers: 0 0 0 / 0;
+  --bg-bold: 21 128 61 / 0.5;
+
+  /* text colors */
+  --text-name: 48 54 66;
+  --text-main-headers: 48 54 66;
+  --text-aside-headers: 48 54 66;
+  --text-brief-description: 48 54 66;
+  --text-subheaders: 48 54 66;
+  --text-normal: 48 54 66;
+  --text-footer: 48 54 66;
+
+  /* borders **/
+  --rounded-headers: 0rem; /* rounded-md */
+  --border-thickness-headers: 1px;
+
+  /** content padding **/
+  --padding-content-x: 32px;
+  --padding-content-y: 32px;
 }
 
 [data-theme='fun-headers'] {
